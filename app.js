@@ -13,3 +13,27 @@ de los nombres de forma aleatoria, mostrando el resultado en pantalla. Fucionali
     lista y se mostrará en la página.
 
 */
+let amigos = []
+
+// Función para agregar amigos
+
+
+function agregarAmigos() {
+    // Capturar el nombre del campo de entrada: Utilizar document.getElementById para obtener el texto ingresado por el usuario.
+    const nombreAmigo = document.getElementById('amigo').value;
+
+    // Verificar si el campo de entrada está vacío
+    if (!nombreAmigo.trim()) {
+        // Validar la entrada: Implementar una validación para asegurarse de que el campo no esté vacío. Si está vacío, mostrar un alert con un mensaje de error: "Por favor, inserte un nombre."
+        alert('Por favor, inserte un nombre.');
+    } else {
+        // Actualizar el array de amigos: Si el valor es válido, añadirlo al arreglo que almacena los nombre de amigos usando el método.push().
+        amigos.push(nombreAmigo.trim());
+
+        // Limpiar el campo de entrada: Después de añadir el nombre, restablecer el campo de texto a una cadena vacía.
+        document.getElementById('amigo').value = '';
+
+        // Mostrar la lista de amigos actualizada en la consola
+        console.log('Lista de amigos actualizada:', amigos);
+    }
+}

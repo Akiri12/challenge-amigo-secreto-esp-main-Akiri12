@@ -7,10 +7,16 @@ El usuario deberá agregar nombres mediante un campo de texto y un botón "Adici
 - Visualizar la lista: Los nombres ingresados aparecerán en una lista debajo del campo de entrada.
 - Sorteo aleatorio: Al hacer clic en el botón "Sortear Amigo", se seleccionará aleatoriamente un nombre de la     lista y se mostrará en la página.
 
+Función para agregar amigos
+
+Desarrolla una función, que permita al usuario ingresar un nombre en el campo de texto y añadirlo a la lista de amigos creada anteriormente.
+Tareas específicas:
+
+- Capturar el valor del campo de entrada: Utilizar document.getElementById o document.querySelector para obtener el texto ingresado por el usuario.
+- Validar la entrada: Implementar una validación para asegurarse de que el campo no esté vacío. Si está vacío, mostrar un alert con un mensaje de error: "Por favor, inserte un nombre."
+- Actualizar el array de amigos: Si el valor es válido, añadirlo al arreglo que almacena los nombre de amigos usando el método.push().
+- Limpiar el campo de entrada: Después de añadir el nombre, restablecer el campo de texto a una cadena vacía.
 */
-
-
-// Función para agregar amigos
 
 let amigos = []
 
@@ -29,13 +35,13 @@ function agregarAmigos() {
         // Limpiar el campo de entrada: Después de añadir el nombre, restablecer el campo de texto a una cadena vacía.
         document.getElementById('amigo').value = '';
 
-        // Mostrar la lista de amigos actualizada en la consola
-
-        console.log('Lista de amigos actualizada:', amigos);
-
         // Actualizar la lista de amigos: Llamar a la función actualizarListaAmigos() para mostrar los nombres en la página.
         actualizarListaAmigos();
     }
+
+    // Mostrar la lista de amigos actualizada en la consola
+
+    console.log('Lista de amigos actualizada:', amigos);
 }
 
 
@@ -66,3 +72,41 @@ function actualizarListaAmigos() {
         lista.appendChild(li); // Agregar el <li> a la lista
     }
 } 
+
+/*Función para sortear los amigos
+
+Escribe una función que seleccione de manera aleatoria uno de los nombres almacenados en el array amigos. Usa Math.random() y Math.floor() para obtener un índice aleatorio.
+
+Tareas específicas:
+
+- Validar que haya amigos disponibles: Antes de sortear, comprobar si el array amigos no está vacío.
+- Generar un índice aleatorio: Usar Math.random() y Math.floor() para seleccionar un índice aleatorio del arreglo.
+- Obtener el nombre sorteado: Utilizar el índice aleatorio para acceder al nombre correspondiente en el arreglo.
+- Mostrar el resultado: Actualizar el contenido del elemento de resultado utilizando document.getElementById()  e innerHTML para mostrar el amigo sorteado.
+
+*/
+
+function sortearAmigo() {
+    const resultado = document.getElementById('resultadoSorteo');
+
+    // Validar que haya amigos en la lista
+    if (amigos.length === 0) {
+        alert('La lista de amigos está vacía. Por favor, añade amigos primero.');
+        return;
+    }
+
+    // Generar un índice aleatorio
+    const indiceAleatorio = Math.floor(Math.random() * amigos.length);
+
+    // Obtener el nombre del amigo sorteado
+    const amigoSorteado = amigos[indiceAleatorio];
+
+    // Mostrar el resultado del sorteo
+    resultado.style.display = 'block';
+    resultado.style.color = 'blue';
+    resultado.style.fontWeight = 'bold';
+    resultado.innerHTML = `El amigo secreto sorteado es: ${amigoSorteado}.`;
+
+    // Ocultar la lista
+    document.getElementById('listaAmigos').style.display = 'none';
+}

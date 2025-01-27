@@ -1,6 +1,6 @@
 # 🎁 Amigo Secreto  
 
-**Estado del proyecto:** 🚧 *En construcción*  
+**Estado del proyecto:** 🚧 *Finalizado*  
 
 Una aplicación interactiva que permite organizar un sorteo de "amigo secreto". Los usuarios pueden ingresar los nombres de sus amigos en una lista, realizar un sorteo aleatorio y descubrir quién será el "amigo secreto".  
 

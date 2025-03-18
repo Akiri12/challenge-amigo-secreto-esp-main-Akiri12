@@ -15,8 +15,15 @@ Una aplicación interactiva que permite organizar un sorteo de "amigo secreto". 
 3. **Visualizar la lista**  
    - Los nombres agregados aparecerán en una lista visible debajo del campo de entrada.  
 4. **Sorteo aleatorio**  
-   - Al hacer clic en el botón **"Sortear Amigo"**, se seleccionará un nombre al azar de la lista y el resultado se mostrará en la página.  
+   - Al hacer clic en el botón **"Sortear Amigo"**, se seleccionará un nombre al azar de la lista y el resultado se mostrará en la página.
+
+¡Diviértete organizando tu próximo intercambio de regalos! 🎄✨  
 
 ---
 
-¡Diviértete organizando tu próximo intercambio de regalos! 🎄✨  
+Puedes probar el resultado en el siguiente LINK: https://akiri12.github.io/challenge-amigo-secreto-esp-main-Akiri12/
+
+![imagen](https://github.com/user-attachments/assets/05fcb1f7-cebe-4ab5-a929-ae048a201df8)
+
+(La imagen muestra una vista previa del funcionamiento)
+
